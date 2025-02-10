@@ -1,116 +1,161 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles/styles.css" />
-    <script
-      src="https://kit.fontawesome.com/382e7d2244.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>Links</title>
+    <script src="./js/menu.js" defer></script>
+    <title>Fernanda Vaz - Bio</title>
   </head>
   <body>
     <div class="container">
       <div class="content">
-        <div class="widget-1">
-          <div class="info-user">
-            <div class="img-user">
-              <img src="./imgs/profile.png" alt="foto de perfil" />
-            </div>
-            <div class="name-profile">
-              <h1>Fernanda Vaz</h1>
-              <span>Desenvolvedora Web</span>
-            </div>
-          </div>
-          <div class="info-icon">
-            <img src="./imgs/laptop.svg" alt="icon" />
+        <div class="banner"></div>
+        <div class="profile">
+          <img src="/public/profile.svg" alt="" />
+          <p>@fevaz</p>
+
+          <div>
+            <h2>Fernanda Vaz</h2>
+            <p>Desenvolvedora Front-end</p>
           </div>
         </div>
 
-        <div class="widget-2">
-          <div class="skills">
-            <span>Tecnologias</span>
-            <div class="skills-icons">
-              <i class="fa-brands fa-html5"></i>
-              <i class="fa-brands fa-css3-alt"></i>
-              <i class="fa-brands fa-square-js"></i>
-              <i class="fa-brands fa-sass"></i>
-              <i class="fa-brands fa-react"></i>
-              <i class="fa-brands fa-node"></i>
-              <i class="fa-brands fa-figma"></i>
-              <i class="fa-brands fa-git-alt"></i>
-              <i class="fa-brands fa-github"></i>
+        <div class="cards-container skills">
+          <h3>Tecnologias</h3>
+          <div class="skills-icons">
+            <div class="icon-container">
+              <span class="caption">html</span>
+              <img class="icon html" src="/public/icons/html.svg" alt="" />
+            </div>
+            <div class="icon-container">
+              <span class="caption">css</span>
+              <img class="icon css" src="/public/icons/css.svg" alt="" />
+            </div>
+            <div class="icon-container">
+              <span class="caption">JavaScript</span>
+              <img class="icon js" src="/public/icons/js.svg" alt="" />
+            </div>
+            <div class="icon-container">
+              <span class="caption">React</span>
+              <img class="icon react" src="/public/icons/react.svg" alt="" />
+            </div>
+            <div class="icon-container">
+              <span class="caption">Sass</span>
+              <img class="icon sass" src="/public/icons/sass.svg" alt="" />
+            </div>
+            <div class="icon-container">
+              <span class="caption">Styled Components</span>
+              <img
+                class="icon styled"
+                src="/public/icons/styled-components.svg"
+                alt=""
+              />
+            </div>
+            <div class="icon-container">
+              <span class="caption">TailwindCSS</span>
+              <img
+                class="icon tailwind"
+                src="/public/icons/tailwind.svg"
+                alt=""
+              />
+            </div>
+            <div class="icon-container">
+              <span class="caption">Node.js</span>
+              <img class="icon node" src="/public/icons/node.svg" alt="" />
+            </div>
+            <div class="icon-container">
+              <span class="caption">Figma</span>
+              <img class="icon figma" src="/public/icons/figma.svg" alt="" />
+            </div>
+            <div class="icon-container">
+              <span class="caption">Git</span>
+              <img class="icon git" src="/public/icons/git.svg" alt="" />
+            </div>
+            <div class="icon-container">
+              <span class="caption">GitHub</span>
+              <img class="icon github" src="/public/icons/github.svg" alt="" />
             </div>
           </div>
         </div>
 
-        <div class="widget-3">
-          <a
-            href="https://portfolio-front-swart-rho.vercel.app/"
-            class="portfolio"
-            target="_blank"
-          >
-            <i class="fa-solid fa-globe"></i>
-            <h1>Meu Portfólio</h1>
+        <div class="cards-container portfolio">
+          <a href="https://fernanda-vaz.github.io/portfolio/">
+            <div class="portfolio-content">
+              <img src="/public/icons/web.svg" alt="" />
+              <h3>Portfólio</h3>
+            </div>
+            <img src="/public/icons/arrow-go.svg" alt="" />
           </a>
         </div>
 
-        <div class="widget-4">
-          <!-- <a
-            class="tread"
-            href="https://www.tiktok.com/@_fevaz"
+        <div class="cards-container projects">
+          <div class="projects-content" id="dropdown-trigger">
+            <img src="/public/icons/projects.svg" alt="" />
+            <h3>Projetos</h3>
+          </div>
+
+          <img
+            id="see-projects"
+            src="/public/icons/arrow-down.svg"
+            alt=""
+            class="arrow-icon"
+          />
+        </div>
+
+        <div class="social-container">
+          <a
+            class="btn"
             target="_blank"
+            href="https://drive.google.com/file/d/1dNBAK6I9Fw5hucUGtaIvXgF4FK3k-i_3/view?usp=drive_link"
           >
-            <div class="text-tread">
-              <h1>Fernanda Vaz</h1>
-              <span>@fevaz</span>
-            </div>
-            <div class="img-tread"></div>
-          </a> -->
-          <div class="social-media">
-            <a
-              href="https://www.tiktok.com/@_fevaz"
-              class="social-container tiktok"
-            >
-              <i class="fa-brands fa-tiktok"></i>
-            </a>
-            <a
-              href="https://www.instagram.com/@fevaz"
-              class="social-container instagram"
-            >
-              <i class="fa-brands fa-square-instagram"></i>
-            </a>
+            Currículo
+            <img src="/icons/arrow-go2.svg" alt="" />
+          </a>
 
-            <a
-              href="https://www.linkedin.com/in/vaz-fernanda"
-              class="social-container linkedin"
-            >
-              <i class="fa-brands fa-linkedin"></i>
+          <div class="social-links">
+            <a href="https://github.com/fernanda-vaz">
+              <img src="/public/icons/github2.svg" alt="" />
             </a>
-
-            <a
-              href="https://www.github.com/fernanda-vaz"
-              class="social-container github"
-            >
-              <i class="fa-brands fa-github"></i>
+            <a href="https://linkedin.com/in/vaz-fernanda">
+              <img src="/public/icons/linkedin.svg" alt="" />
+            </a>
+            <a href="https://instagram.com/fevaz">
+              <img src="/public/icons/instagram.svg" alt="" />
+            </a>
+            <a href="https://tiktok.com/@fevaz">
+              <img src="/public/icons/tiktok.svg" alt="" />
             </a>
           </div>
         </div>
 
-        <div class="widget-5">
-          <span>Estou escutando...</span>
+        <div class="cards-container cta">
+          <a href="https://buymeacoffee.com/fernandavaz" class="cta-container">
+            <img src="/public/icons/buy-me-a-coffee.svg" alt="" />
+            <p>buy me a coffee? (:</p>
+          </a>
+          <a
+            href="https://wa.me/5561990008520?text=Tenho%20uma%20ideia%20para%20um%20projeto.%20Podemos%20conversar?%20:)"
+            class="cta-container"
+          >
+            <p>Tem um projeto em mente?</p>
+            <img src="/public/icons/whatsapp.svg" alt="" />
+          </a>
+        </div>
+
+        <div class="cards-container spotify">
+          <h3>O que estou escutando...</h3>
           <iframe
             style="border-radius: 12px"
             src="https://open.spotify.com/embed/playlist/37i9dQZF1E4l1ZvnOT1pCh?utm_source=generator"
             width="100%"
-            height="152"
+            height="352"
             frameborder="0"
             allowfullscreen=""
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"

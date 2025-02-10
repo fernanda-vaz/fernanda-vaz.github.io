@@ -1,0 +1,330 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+:root {
+  --color-bg: #1e1e1e;
+  --color-bg-links: #333333;
+  --color-light-blue: #13f2f2;
+  --color-medium-blue: #0a89a6;
+  --color-white: #f2f2f2;
+}
+
+body {
+  font-family: 'Space Grotesk', serif;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+@mixin DisplayFlex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+.container {
+  background-color: var(--color-bg);
+  width: 100vw;
+  height: 100%;
+  @include DisplayFlex(column, center, center);
+}
+
+.content {
+  margin: 1rem;
+  width: 420px;
+  background-color: var(--color-bg-links);
+  border-radius: 12px;
+  @include DisplayFlex(column, center, center);
+  gap: 1rem;
+}
+
+.banner {
+  min-width: 420px;
+  min-height: 140px;
+  background: url('../public/banner.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+.profile {
+  @include DisplayFlex(column, center, center);
+  margin-top: -2.5rem;
+  gap: 0.3rem;
+  text-align: center;
+  color: var(--color-white);
+  padding-bottom: 1rem;
+
+  img {
+    box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+  }
+
+  h2 {
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-weight: 300;
+    font-size: 1rem;
+  }
+}
+
+.cards-container {
+  border: 1px solid var(--color-light-blue);
+  border-radius: 12px;
+  padding: 1rem;
+  color: var(--color-white);
+  transition: transform 0.3s ease;
+  width: 380px;
+  min-height: 88px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+.skills {
+  padding: 1rem 2rem;
+
+  h3 {
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0 0.3rem 0.5rem;
+    font-size: 1rem;
+  }
+
+  .skills-icons {
+    padding: 0.2rem;
+    @include DisplayFlex(row, center, center);
+    flex-wrap: wrap;
+    gap: 1rem;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+
+    .icon-container {
+      position: relative;
+      @include DisplayFlex(column, center, center);
+      text-align: center;
+
+      .html {
+        transition: opacity 0.3s ease-in-out;
+
+        &:hover {
+          content: url('/public/icons/html-hover.svg');
+        }
+      }
+
+      .css {
+        transition: opacity 0.3s ease-in-out;
+
+        &:hover {
+          content: url('/public/icons/css-hover.svg');
+        }
+      }
+
+      .js {
+        transition: opacity 0.3s ease-in-out;
+
+        &:hover {
+          content: url('/public/icons/js-hover.svg');
+        }
+      }
+
+      .react {
+        transition: opacity 0.3s ease-in-out;
+
+        &:hover {
+          content: url('/public/icons/react-hover.svg');
+        }
+      }
+
+      .sass {
+        transition: opacity 0.3s ease-in-out;
+
+        &:hover {
+          content: url('/public/icons/sass-hover.svg');
+        }
+      }
+
+      .styled {
+        transition: opacity 0.3s ease-in-out;
+
+        &:hover {
+          content: url('/public/icons/styled-components-hover.svg');
+        }
+      }
+
+      .tailwind {
+        transition: opacity 0.3s ease-in-out;
+
+        &:hover {
+          content: url('/public/icons/tailwindcss-hover.svg');
+        }
+      }
+
+      .node {
+        transition: opacity 0.3s ease-in-out;
+
+        &:hover {
+          content: url('/public/icons/node-hover.svg');
+        }
+      }
+
+      .figma {
+        transition: opacity 0.3s ease-in-out;
+
+        &:hover {
+          content: url('/public/icons/figma-hover.svg');
+        }
+      }
+
+      .git {
+        transition: opacity 0.3s ease-in-out;
+
+        &:hover {
+          content: url('/public/icons/git-hover.svg');
+        }
+      }
+
+      .github {
+        transition: opacity 0.3s ease-in-out;
+
+        &:hover {
+          content: url('/public/icons/github-hover.svg');
+        }
+      }
+
+      .caption {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        top: -10px;
+        text-align: center;
+        white-space: nowrap;
+        font-size: 8px;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+      }
+
+      &:hover {
+        .caption {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.portfolio {
+  @include DisplayFlex(row, space-between, center);
+  padding: 1rem;
+  transition: background-color 0.3s ease;
+
+  a {
+    @include DisplayFlex(row, space-between, center);
+    width: 100%;
+
+    .portfolio-content {
+      @include DisplayFlex(row, space-between, center);
+      gap: 0.5rem;
+    }
+  }
+
+  &:hover {
+    background-color: var(--color-medium-blue);
+  }
+}
+
+.projects {
+  @include DisplayFlex(row, space-between, center);
+  padding: 1rem;
+  position: relative;
+  cursor: pointer;
+
+  .projects-content {
+    @include DisplayFlex(row, space-between, center);
+    gap: 0.5rem;
+  }
+}
+
+.social-container {
+  @include DisplayFlex(row, space-between, center);
+  width: 80%;
+  padding: 0 1rem;
+
+  .btn {
+    @include DisplayFlex(row, center, center);
+    width: fit-content;
+    background-color: var(--color-medium-blue);
+    color: var(--color-white);
+    border: none;
+    font-weight: 700;
+    padding: 0.5rem;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+    &:hover {
+      opacity: 0.75;
+      transform: translateY(-2px);
+    }
+  }
+
+  .social-links {
+    @include DisplayFlex(row, space-between, center);
+    gap: 0.5rem;
+
+    a {
+      transition: transform 0.3s ease-in-out;
+
+      &:hover {
+        transform: translateY(-2px);
+      }
+    }
+  }
+}
+
+.cta {
+  @include DisplayFlex(row, space-between, center);
+  padding: 0.5rem;
+  gap: 1rem;
+
+  .cta-container {
+    @include DisplayFlex(column, center, center);
+    border: 1px solid var(--color-light-blue);
+    border-radius: 12px;
+    width: 100%;
+    height: 100%;
+    padding: 2rem 0.5rem;
+    gap: 1rem;
+    text-align: center;
+    transition: background-color 0.3s ease;
+
+    p {
+      font-weight: 300;
+      font-size: 8px;
+    }
+
+    &:hover {
+      background-color: var(--color-bg);
+    }
+  }
+}
+
+.spotify {
+  @include DisplayFlex(column, center, center);
+  gap: 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
