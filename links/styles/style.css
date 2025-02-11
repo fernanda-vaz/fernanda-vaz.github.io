@@ -48,7 +48,7 @@ a {
 .banner {
   min-width: 420px;
   min-height: 140px;
-  background: url("../public/banner.svg");
+  background: url(".../public/banner.svg");
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 12px 12px 0 0;
@@ -124,67 +124,67 @@ a {
   transition: opacity 0.3s ease-in-out;
 }
 .skills .skills-icons .icon-container .html:hover {
-  content: url("/public/icons/html-hover.svg");
+  content: url("./public/icons/html-hover.svg");
 }
 .skills .skills-icons .icon-container .css {
   transition: opacity 0.3s ease-in-out;
 }
 .skills .skills-icons .icon-container .css:hover {
-  content: url("/public/icons/css-hover.svg");
+  content: url("./public/icons/css-hover.svg");
 }
 .skills .skills-icons .icon-container .js {
   transition: opacity 0.3s ease-in-out;
 }
 .skills .skills-icons .icon-container .js:hover {
-  content: url("/public/icons/js-hover.svg");
+  content: url("./public/icons/js-hover.svg");
 }
 .skills .skills-icons .icon-container .react {
   transition: opacity 0.3s ease-in-out;
 }
 .skills .skills-icons .icon-container .react:hover {
-  content: url("/public/icons/react-hover.svg");
+  content: url("./public/icons/react-hover.svg");
 }
 .skills .skills-icons .icon-container .sass {
   transition: opacity 0.3s ease-in-out;
 }
 .skills .skills-icons .icon-container .sass:hover {
-  content: url("/public/icons/sass-hover.svg");
+  content: url("./public/icons/sass-hover.svg");
 }
 .skills .skills-icons .icon-container .styled {
   transition: opacity 0.3s ease-in-out;
 }
 .skills .skills-icons .icon-container .styled:hover {
-  content: url("/public/icons/styled-components-hover.svg");
+  content: url("./public/icons/styled-components-hover.svg");
 }
 .skills .skills-icons .icon-container .tailwind {
   transition: opacity 0.3s ease-in-out;
 }
 .skills .skills-icons .icon-container .tailwind:hover {
-  content: url("/public/icons/tailwindcss-hover.svg");
+  content: url("./public/icons/tailwindcss-hover.svg");
 }
 .skills .skills-icons .icon-container .node {
   transition: opacity 0.3s ease-in-out;
 }
 .skills .skills-icons .icon-container .node:hover {
-  content: url("/public/icons/node-hover.svg");
+  content: url("./public/icons/node-hover.svg");
 }
 .skills .skills-icons .icon-container .figma {
   transition: opacity 0.3s ease-in-out;
 }
 .skills .skills-icons .icon-container .figma:hover {
-  content: url("/public/icons/figma-hover.svg");
+  content: url("./public/icons/figma-hover.svg");
 }
 .skills .skills-icons .icon-container .git {
   transition: opacity 0.3s ease-in-out;
 }
 .skills .skills-icons .icon-container .git:hover {
-  content: url("/public/icons/git-hover.svg");
+  content: url("./public/icons/git-hover.svg");
 }
 .skills .skills-icons .icon-container .github {
   transition: opacity 0.3s ease-in-out;
 }
 .skills .skills-icons .icon-container .github:hover {
-  content: url("/public/icons/github-hover.svg");
+  content: url("./public/icons/github-hover.svg");
 }
 .skills .skills-icons .icon-container .caption {
   visibility: hidden;
